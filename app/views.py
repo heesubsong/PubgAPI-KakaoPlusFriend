@@ -93,15 +93,28 @@ def answer(request):
         user_id = datacontent
         user_dic[userkey] = user_dic[userkey]+[user_id]
         stats = chicken.chicken_api(user_dic[userkey][0],user_dic[userkey][1],user_dic[userkey][2])
-        return JsonResponse({
-            'message': {
-                'text': stats,
-            },
-            "keyboard": {
-                "type": "buttons",
-                "buttons": ["다시하기", "개발자정보"]
-            }
-        })
+        if stats != "닉네임을 정확히 입력해주세요(대소문자)"
+            return JsonResponse({
+                'message': {
+                    'text': stats,
+                },
+                "keyboard": {
+                    "type": "buttons",
+                    "buttons": ["다시하기", "개발자정보"]
+                }
+            })
+        else :
+            return JsonResponse({
+                'message': {
+                    'text': 
+                    "▶"+server_modes[0]+" 서버 선택 완료 \n"+
+                    "▶"+server_modes[1]+" 모드 선택 완료 \n"+  
+                    "==== 닉네임 입력 ====",
+                },
+                "keyboard": {
+                    "type": "text"
+                }
+            })
     else :
         return JsonResponse({
             'message': {
