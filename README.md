@@ -4,7 +4,7 @@
 
 작동화면은 http://pf.kakao.com/_uxixkVj 주소에서 확인할 수 있습니다.
 
-![카카오플러스친구 전적검색](C:\Users\heesub\Downloads\카카오플러스친구 전적검색.gif)
+![카카오플러스친구 전적검색](https://user-images.githubusercontent.com/21908611/46129508-e5f60a00-c271-11e8-8c3b-380e60289e53.gif)
 
 ---
 
