@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+kakao_pubgapi
+db.sqlite3
+/static
+.DS_Store
+app/chicken.py
