@@ -93,7 +93,7 @@ def answer(request):
         user_id = datacontent
         user_dic[userkey] = user_dic[userkey]+[user_id]
         stats = chicken.chicken_api(user_dic[userkey][0],user_dic[userkey][1],user_dic[userkey][2])
-        if stats != "닉네임을 정확히 입력해주세요(대소문자)"
+        if stats != "닉네임을 정확히 입력해주세요(대소문자)":
             return JsonResponse({
                 'message': {
                     'text': stats,
