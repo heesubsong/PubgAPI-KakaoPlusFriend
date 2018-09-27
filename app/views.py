@@ -91,8 +91,11 @@ def answer(request):
 
     elif type(datacontent) == type("uncheon"):
         user_id = datacontent
+        if len(user_dic[userkey])>2:
+            del user_dic[userkey][2]
         user_dic[userkey] = user_dic[userkey]+[user_id]
         stats = chicken.chicken_api(user_dic[userkey][0],user_dic[userkey][1],user_dic[userkey][2])
+        #select_server, select_mode, userid
         if stats != "닉네임을 정확히 입력해주세요(대소문자)":
             return JsonResponse({
                 'message': {
@@ -107,8 +110,9 @@ def answer(request):
             return JsonResponse({
                 'message': {
                     'text': 
-                    "▶"+server_modes[0]+" 서버 선택 완료 \n"+
-                    "▶"+server_modes[1]+" 모드 선택 완료 \n"+  
+                    "▶"+user_dic[userkey][0]+" 서버 선택 완료 \n"+
+                    "▶"+user_dic[userkey][1]+" 모드 선택 완료 \n"+  
+                    stats+"\n"+
                     "==== 닉네임 입력 ====",
                 },
                 "keyboard": {
