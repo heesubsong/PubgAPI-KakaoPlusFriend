@@ -82,7 +82,7 @@ def answer(request):
                 'text': 
                 "▶"+server_modes[0]+" 서버 선택 완료 \n"+
                 "▶"+server_modes[1]+" 모드 선택 완료 \n"+  
-                "==== 계정 입력 ==== \n",
+                "==== 닉네임 입력 ====",
             },
             "keyboard": {
                 "type": "text"
